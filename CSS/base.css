@@ -56,6 +56,7 @@
 \*------------------------------------*/
 
 :root {
+  
   /* --bg-primary:           #F4F3F5;
   --bg-secondary:         #FFFFFF;
   --bg-header:            #6200EA;
@@ -85,8 +86,12 @@
   #BASE FONT SIZE
 \*------------------------------------*/
 
-/* html { font-size: 20px;}  */
+html { 
+  font-size: 10px;
+  background-color: #F4F3F5;
+} 
 /* [2] */
+
 
 
 

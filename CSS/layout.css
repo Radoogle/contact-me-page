@@ -28,20 +28,28 @@
   #ELEMENTS
 \*------------------------------------*/
 
-.layout__item--full-width {
-  width: 100%;
-}
+.layout__item--full-width { width: 100%; }
 
 .layout__item--70-percent {
   width: 70%;
   margin: 0 auto;
 }
 
-.layout__item--50-percent {
-  width: 50%;
+.layout__item--50-percent-w-gutter { width: calc(50% - 1.5rem); }
+
+.flex-container {
+  display:          flex;
+  align-items:      center;
+  justify-content:  center;
 }
 
+.flex-dir-column  { flex-direction: column; }
 
+.flex-dir-row     { flex-direction: row; }
+
+.main {
+  justify-content: space-between;
+}
 
 /*------------------------------------*\
   #IMAGES
