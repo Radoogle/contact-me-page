@@ -1,0 +1,288 @@
+/**
+ * PREZENTARE GENERALĂ
+ *
+ * Acest fișier descrie componentele care alcătuiesc site-ul.
+ * De la layout-ul interior la culoarea fontului etc.
+ *
+ * Incercand sa respecte regula BEM (Block–Element–Modifier) din
+ * CSS guidelines: https://cssguidelin.es/#bem-like-naming a lui Harry Roberts
+ */
+
+
+/**
+ * CONTENTS
+ *
+ *
+ * BUTTONS
+ *
+ * HEADER
+ *
+ * NAVIGATION
+ *
+ * MAIN CONTENT
+ *
+ * SIDEBAR
+ *
+ * FOOTER
+ */
+
+
+
+
+
+/*------------------------------------*\
+  #BUTTONS
+\*------------------------------------*/
+
+
+/*
+ * we make the line-height the same as height in order to have the text vertically aligned
+*/
+
+.btn {
+  display:          inline-block;
+  width:            8rem;
+  text-align:       center;
+  border:           .1rem solid; 
+  border-radius:    1.2rem;
+  line-height:      2rem; /* [1] */
+}
+
+  .primary-btn {
+    border-color:     var(--thirdly-font-color);
+    color:            var(--thirdly-font-color);
+    }
+
+  .secondary-btn {
+    border-color:     var(--btn-main-color);
+    color:            var(--secondary-font-color);
+  }
+
+  .main-head__btn {
+    color:            var(--secondary-font-color);
+    background-color: var(--bg-secondary);
+    border-color:     #FFFFFF;
+  }
+
+  .card-btn {
+    color:                      var(--small-font-color);
+    border-bottom-left-radius:  .75rem;
+    border-bottom-right-radius: .75rem;
+    text-align:                 center;
+    line-height:                3rem;
+    display:                    inline-block;
+    width:                      100%;
+    border-top:                 1px solid var(--bg-primary);
+  }
+
+
+
+
+
+/*------------------------------------*\
+  #HEADER
+\*------------------------------------*/
+
+/**
+ *
+ * 1. Folosim acest padding left pentru ca logo-ul să apară în același loc
+ * la fel ca în prototipul de design.
+ * to keep it in the middle: (100%  - self-width) / 2
+ *
+ */
+
+.main-head {
+  background-color: var(--bg-header);
+  display:          flex;
+  justify-content:  space-between;
+  flex-wrap:        wrap;
+  align-items:      center;
+  height:           4rem;
+  padding:          0 calc(50% - 4.5rem) 0 12.5%; /* [1] */
+  width: 100%;
+}
+
+  .main-head__logo { color: var(--thirdly-font-color); }
+
+  .main-head__logo-img {
+    width:  9rem;
+    height: 2.5rem;
+  }
+
+
+
+
+
+/*------------------------------------*\
+  #NAVIGATION
+\*------------------------------------*/
+
+/**
+ * 1. Acest padding este necesar pentru a putea afișa
+ * bara mov a efectului hover în locul adecvat.
+ */
+
+.main-nav {
+  background-color: var(--bg-secondary);
+  display:          flex;
+  flex-direction:   row;
+  justify-content:  center;
+  flex-wrap:        wrap;
+  align-items:      center;
+  height:           4rem;
+  padding:          0 15%;
+}
+
+  .main-nav__link {
+    color:            var(--primary-font-color);
+    background-color: var(--bg-secondary);
+    padding:          1.65rem 0 1.6rem 0;
+    margin:           0 1.5rem;
+  }
+
+  .main-nav__link:hover {
+    color:         var(--secondary-font-color);
+    border-bottom: .2rem solid var(--secondary-font-color);
+    padding:       1.65rem 0 1.4rem 0; /* [1] */
+  }
+
+
+
+
+
+
+/*------------------------------------*\
+  #MAIN CONTENT
+\*------------------------------------*/
+
+/** 
+ * 1. fallback background color in case the img can't be loaded.
+ * 2. for the last post in list we eliminate the bottom margin.
+ */
+
+/* .content { padding: 2rem 0 2rem 22.50%; } */
+.content { padding: 2rem 0 2rem 12.5vw; }
+
+  .content-post {
+    background-color: var(--bg-secondary);
+    border-radius:    .75rem;
+    margin-bottom:    1.5rem;
+    padding:          3rem 3rem 2.5rem 3rem;
+  }
+
+  .featured-post {
+    color:      var(--thirdly-font-color);
+    background: var(--bg-secondary);    /* [1] */
+    background: url(../assets/roberto-nickson-5ui0tfMC5ts-unsplash.jpg) no-repeat;
+    background-size: cover;
+  }
+
+    .credits {
+      display:        inline-block;
+      font-weight:    bold;
+      letter-spacing: .12rem;
+      font-size:      .6rem;
+      text-transform: uppercase;
+    }
+
+    .post-title    { line-height:  2.5rem; }
+
+    .post-text     { line-height:  1.5rem; }
+
+  .thumbnail-post  { padding:      1rem; }
+
+  .thumbnail-img   { margin-right: 1rem; }
+
+  .thumbnail-title { color:        var(--secondary-font-color); }
+
+  .thumbnail-text {
+    font-size:      .7rem;
+    color:          var(--primary-font-color);
+  }
+
+.content-post-credits { color: var(--small-font-color); }
+
+.post-image {
+  width:                      100%;
+  height:                     16rem;
+  border-bottom-left-radius:  0;
+  border-bottom-right-radius: 0;
+}
+
+.image-post {
+  border-top-left-radius:  0;
+  border-top-right-radius: 0;
+}
+
+.another-post {     /* [2] */
+  margin-bottom: 0;
+}
+
+
+  
+
+
+/*------------------------------------*\
+  #SIDEBAR
+\*------------------------------------*/
+
+/* .side { padding: 2rem 37.61% 2rem 0; } */
+.side { padding: 2rem 12.5vw 2rem 0; }
+
+  .side-card {
+    background-color: var(--bg-secondary);
+    margin-bottom:    1.5rem;
+    border-radius:    .75rem;
+  }
+
+    .card-title {
+      background-color:        var(--bg-header);
+      color:                   var(--thirdly-font-color);
+      text-align:              center;
+      border-top-left-radius:  .75rem;
+      border-top-right-radius: .75rem;
+      line-height:             3rem;
+    }
+
+    .card-article { padding: 1rem; }
+ 
+  .categories-card {
+    list-style-type: none;
+    width: 100%;
+    padding: 0;
+  }
+
+    .category {
+      border-bottom:    1px solid var(--bg-primary);
+      width:            100%;
+      color:            var(--primary-font-color);
+      padding:          0 1.5rem;
+      text-align:       left;
+      line-height:      2.5rem;
+      display:          inline-block;
+    }
+
+
+
+
+
+/*------------------------------------*\
+  #FOOTER
+\*------------------------------------*/
+
+.main-footer {
+  background-color: var(--bg-footer);
+  display:          flex;
+  justify-content:  center;
+  align-items:      center;
+  height:           5rem;
+  color:            var(--small-font-color);
+  text-transform:   uppercase;
+  font-size:        .6rem;
+  font-weight:      bold;
+  letter-spacing:   .12rem;
+  line-height:      .75rem;
+}
+
+  .footer-text    { margin-bottom: 0; }
+  .important-text { color: var(--secondary-font-color); }

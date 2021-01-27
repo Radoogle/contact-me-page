@@ -1,0 +1,105 @@
+/**
+ * PREZENTARE GENERALĂ
+ *
+ * Acest fișier gestionează schema (layout) website-ului. În loc să seteze
+ * schemele componentelor pe rând, creem un sistem separat
+ * care are un singur obiectiv—de a spune fiecărui element
+ * ce dimensiune trebuie să aibă și unde trebuie să apară.
+ */ 
+ 
+ 
+ 
+ /**
+ * CONTENTS
+ *
+ * LAYOUT
+ * Elements.............Rules for the container and items
+ * Images...............Floating just the thumbnail images and clearing the float after.
+ *
+ * GRID GAPS
+ * Grid gaps............Whitespaces between columns in grids.
+ */
+
+
+
+
+
+/*------------------------------------*\
+  #ELEMENTS
+\*------------------------------------*/
+
+.main-head {
+  grid-area:  header;
+  place-self: center strech;
+}
+
+
+.main-nav {
+  grid-area: nav;
+}
+
+
+.content {
+  grid-area: content;
+} 
+
+.thumbnail-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.side {
+  grid-area: sidebar;
+}
+
+
+.main-footer {
+  grid-area:  footer;
+  place-self: center strech;
+}
+
+
+.page {
+  display:                grid;
+  grid-template-columns:  2fr 1fr;
+  grid-template-areas:
+                          "header  header"
+                          "nav     nav"
+                          "content sidebar"
+                          "footer  footer";
+}
+
+
+
+
+
+/*------------------------------------*\
+  #IMAGES
+\*------------------------------------*/
+
+.thumbnail-img {
+  float: left;
+}
+
+  .thumbnail-img::after {
+    content:  "";
+    clear:    both;
+    display:  table;
+  }
+
+
+
+
+
+/*------------------------------------*\
+  #GRID GAPS
+\*------------------------------------*/
+
+/**
+* 1. row gap = 0 and column gap = 1.5rem.
+*/
+
+.page,
+.thumbnail-wrapper {
+  gap: 0 1.5rem;   /* [1] */
+}

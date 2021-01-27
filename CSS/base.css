@@ -1,0 +1,180 @@
+/**
+ * OVERVIEW
+ *
+ * This project is separated to the following style sheets:
+ *
+ * normalize.min.css....CSS reset.
+ * base.css.............Global rules and helpers.
+ * layout.css...........CSS rules that control the layout of the page.
+ * components.css.......Own CSS for the components that build up the page.
+ */
+
+
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ * Variables............Globally-available variables.
+ * Box-sizing...........Better default `box-sizing`.
+ * Base font size.......Setting the base font size.
+ * Margins..............Top and bottom margins global values.
+ * Anchors..............Implicit link settings.
+ *
+ * BASE STYLES
+ * Headings.............H1, H2, H3 styles.
+ * Links, buttons.......Base styles.
+ * Images...............dimensions, radius and object-fit.
+ */
+
+
+
+
+/*------------------------------------*\
+  #SETTINGS
+\*------------------------------------*/
+
+/**
+ * 1. Un model mai rezonabil de box-sizing
+ *
+ * 2. Această regulă modifică valoarea base font-size,
+ * cu care sunt comparate toate unitățile rem units.
+ *
+ * 3. Normalize.css setează o margine top și bottom pentru aceste elemente.
+ * Asta ar interfera cu layout-ul nostru, deci, cu această regulă o suprascriem.
+ *
+ * 4. Dăm un bottom-margin general principalelor noastre elemente tipografice
+ * care ne va asigura că toate marginile orizontale vor fi la fel
+ * în mod implicit, pe tot site-ul. Apoi, în unele cazuri, putem să suprascriem.
+ */
+
+
+
+
+
+/*------------------------------------*\
+  #VARIABLES
+\*------------------------------------*/
+
+:root {
+  /* --bg-primary:           #F4F3F5;
+  --bg-secondary:         #FFFFFF;
+  --bg-header:            #6200EA;
+  --bg-footer:            #211138;
+  --primary-font-color:   #211138;
+  --secondary-font-color: #6200EA;
+  --thirdly-font-color:   #ffffff;
+  --small-font-color:     #B2ACBA;
+  --btn-main-color:       #6200EA; */
+}
+
+
+
+
+
+/*------------------------------------*\
+  #BOX-SIZING
+\*------------------------------------*/
+
+* { box-sizing: border-box;} /* [1] */
+
+
+
+
+
+/*------------------------------------*\
+  #BASE FONT SIZE
+\*------------------------------------*/
+
+/* html { font-size: 20px;}  */
+/* [2] */
+
+
+
+
+
+/*------------------------------------*\
+  #MARGINS
+\*------------------------------------*/
+
+
+/* [3] */
+
+/* h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0; 
+} */
+
+/* [4] */
+
+/* h1,
+h2,
+h3,
+p,
+small {
+  margin-bottom: .75rem; 
+} */
+
+/* a {
+  text-decoration: none;
+  cursor:          pointer;
+} */
+
+
+
+
+
+/*------------------------------------*\
+  #BASE STYLES
+\*------------------------------------*/
+
+/* body {
+  font-family:      'Montserrat', sans-serif;
+  color:            var(--primary-font-color);
+  background-color: var(--bg-primary);
+} */
+
+
+
+
+
+/*------------------------------------*\
+  #HEADINGS AND LINKS/BUTTONS
+\*------------------------------------*/
+
+/* h1 { font-size: 2rem; }
+
+h2,
+h3,
+a { 
+  font-size:      .6rem; 
+  font-weight:    bold;
+  text-transform: uppercase;
+  letter-spacing: .12rem;
+} */
+
+
+
+
+
+/*------------------------------------*\
+  #IMAGES
+\*------------------------------------*/
+
+/**
+ * 1. Avem nevoie de această declarație display: block; pentru că altfel,
+ * va exista un spațiu gol de câțiva pixeli între imagine
+ * și restul conținutului. Asta din cauză că img tag este
+ * un inline element special implicit, afectat de proprietatea linie-înălțime.
+ * Pentru a evita asta, mai bine setezi ca imaginea să fie un element  block.
+ */
+
+/* img {
+  width:         6rem;
+  height:        6rem;
+  border-radius: .5rem;
+  object-fit:    cover;
+  display:       block; 
+} */
