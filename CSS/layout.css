@@ -28,48 +28,18 @@
   #ELEMENTS
 \*------------------------------------*/
 
-.main-head {
-  grid-area:  header;
-  place-self: center strech;
+.layout__item--full-width {
+  width: 100%;
 }
 
-
-.main-nav {
-  grid-area: nav;
+.layout__item--70-percent {
+  width: 70%;
+  margin: 0 auto;
 }
 
-
-.content {
-  grid-area: content;
-} 
-
-.thumbnail-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.layout__item--50-percent {
+  width: 50%;
 }
-
-.side {
-  grid-area: sidebar;
-}
-
-
-.main-footer {
-  grid-area:  footer;
-  place-self: center strech;
-}
-
-
-.page {
-  display:                grid;
-  grid-template-columns:  2fr 1fr;
-  grid-template-areas:
-                          "header  header"
-                          "nav     nav"
-                          "content sidebar"
-                          "footer  footer";
-}
-
-
 
 
 
@@ -77,15 +47,7 @@
   #IMAGES
 \*------------------------------------*/
 
-.thumbnail-img {
-  float: left;
-}
 
-  .thumbnail-img::after {
-    content:  "";
-    clear:    both;
-    display:  table;
-  }
 
 
 
@@ -99,7 +61,3 @@
 * 1. row gap = 0 and column gap = 1.5rem.
 */
 
-.page,
-.thumbnail-wrapper {
-  gap: 0 1.5rem;   /* [1] */
-}
