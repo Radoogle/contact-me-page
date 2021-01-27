@@ -1,0 +1,322 @@
+/**
+ * PREZENTARE GENERALĂ
+ *
+ * Acest fișier descrie componentele care alcătuiesc site-ul.
+ * De la layout-ul interior la culoarea fontului etc.
+ *
+ * L-ai mai văzut, dar acum, gândirea BEM (Block–Element–Modifier)
+ * este și mai evidentă în cod. Dacă este pentru prima dată
+ * când auzi de BEM, îți recomandăm să citești următoarea secțiune
+ * în CSS guidelines: https://cssguidelin.es/#bem-like-naming al lui Harry Roberts.
+ */
+
+
+/**
+ * CUPRINS
+ *
+ * 1. BUTOANE
+ *
+ * 2. HEADER
+ *
+ * 3. NAVIGARE
+ *
+ * 4. INFORMAȚII DE CONTACT
+ *
+ * 5. FORMULAR DE CONTACT
+ *
+ * 6. FOOTER
+ */
+
+
+
+
+
+/*------------------------------------*\
+  #BUTOANE
+\*------------------------------------*/
+
+/**
+ * 1. Înlăturăm border-ul pentru a nu ne deranja când facem padding-ul.
+ * De asemenea, nu este nevoie să punem borders pe un buton întreg. :)
+ *
+ */
+
+.button {
+  display:        inline-block;
+  border:         2px solid;
+  border-radius:  1.786rem;
+  text-align:     center;
+}
+
+  .button--primary-solid {
+    border:           0; /* [1] */
+    background-color: #6200ea;
+    color:            #ffffff;
+  }
+
+  .button--primary-solid:visited { color: #ffffff; }
+
+
+
+
+
+/*------------------------------------*\
+  #HEADER
+\*------------------------------------*/
+
+.header {
+  height:           80px;
+  background-color: #6200ea;
+}
+
+  .logo {
+    float:  left;
+    margin: 1.017rem 0;
+  }
+
+
+
+
+
+/*------------------------------------*\
+  #NAVIGAȚIE
+\*------------------------------------*/
+
+/**
+ * 1. Acest padding este necesar pentru ca site-ul să poată afișa
+ * bara albă a efectului hover în locul corect.
+ *
+ * 2. Îi dăm linkului un border jos care este invizibil implicit.
+ * Îl vom folosi mai târziu, astfel ca să apară o bară gri când trecem peste el.
+ * Border-ul este invizibil implicit astfel trebuie să-i schimbi doar culoarea,
+ * și astfel interfața nu sare ca și când ai da hover
+ * peste border.
+ *
+ * 3. Această regulă scoate marginea stângă inutilă
+ * din primul link.
+ */
+
+.navigation { height: 80px; }
+
+  .navigation__link-container {
+    float:        right;
+    padding-top:  2.321rem;
+  }
+
+    .navigation__link {
+      vertical-align: middle;
+      padding-bottom: 2rem; /* [1] */
+      border-bottom:  4px solid; /* [2] */
+      border-color:   transparent; /* [2] */
+      margin-left:    4.571rem;
+      color:          #f4f3f5;
+      opacity:        0.65;
+      font-size:      .857rem;
+      font-weight:    bold;
+      text-transform: uppercase;
+      letter-spacing: .171rem;
+    }
+
+    a.navigation__link:first-child { margin-left: 0; } /* [3] */
+
+    .navigation__link:visited { color: #f4f3f5; }
+
+    .navigation__link:hover {
+      border-color:   #ffffff;
+      color:          #ffffff;
+      opacity:        1;
+    }
+
+
+
+
+
+/*------------------------------------*\
+  #INFORMAȚII DE CONTACT
+\*------------------------------------*/
+
+/**
+ * 1. Elementele  Anchor sunt elemente inline implicit. Dacă vrem să le
+ * afișăm alăturat și vrem să controlăm valorile marginilor,
+ * paddings etc., trebuie să le convertim în elemente block sau inline-block.
+ *
+ * 2. Trebuie să suprascriem heading bottom margin-ul implicit
+ *
+ * 3. Această regulă crează fundalul circular al iconurilor din social media.
+ *
+ * 4. Dacă un element are nevoie de un border perfect circular, este important
+ * ca lățimea și înălțimea să aibă aceeași mărime. Altfel vom obține doar o formă
+ * ovală. Mărimea padding-urilor trebuie să fie și ea egală pe ambele părți.
+ *
+ * 5. Poți face un border perfect circular cu un 50% border radius
+ * dacă lățimea și înălțimea sunt identice.
+ *
+ * 6. Acest set de reguli controlează iconurile FontAwesome. Înlătură
+ * lățimea și înălțimea implicită în exces și
+ * le setează dimensiunile corect.
+ */
+
+.contact-info {
+  padding:          4.286rem;
+  border-radius:    1.071rem;
+  background-color: #ffffff;
+}
+
+  .contact-info__map {
+    width:         100%;
+    height:        280px;
+    border-radius: 1.071rem;
+  }
+
+  .contact-info__map,
+  .contact-info__address,
+  .contact-info__phone-email {
+    margin-bottom: 2.143rem;
+  }
+
+  .contact-info__social-media { margin-bottom: .357rem; }
+
+    .contact-info__heading,
+    .contact-info__link {
+      color: #6200ea;
+    }
+
+    .contact-info__link {
+      display:        block; /* [1] */
+      margin-bottom:  .714rem;
+      font-size:      .857rem;
+      font-weight:    bold;
+      text-transform: uppercase;
+      letter-spacing: .171rem;
+    }
+
+    .contact-info__heading {
+      margin-bottom:  .7143rem; /* [2] */
+      font-size:      .857rem;
+      font-weight:    bold;
+      text-transform: uppercase;
+      letter-spacing: .171rem;
+    }
+
+    .contact-info__social-media-link { /* [3] */
+      display:          inline-block; /* [1] */
+      width:            2.857rem; /* [4] */
+      height:           2.857rem; /* [4] */
+      padding:          .714rem; /* [4] */
+      border-radius:    50%; /* [5] */
+      margin-right:     .714rem;
+      background-color: #6200ea;
+      text-align:       center;
+    }
+
+      .contact-info__social-media-icon { /* [6] */
+        color:          #ffffff;
+        font-size:      1.4285rem;
+      }
+
+
+
+
+
+/*------------------------------------*\
+#FORMULAR DE CONTACT
+\*------------------------------------*/
+
+/**
+ * 1. Input-urile sunt elemente inline implicit. Înainte de a lucra cu
+ * valorile margin-urilor, padding-urilor etc., trebuie să le convertim în
+ * elemente block sau inline-block.
+ *
+ * 2. Întâi facem border-ul nelipsit cu input zero.
+ *
+ * 3. Îi dăm input-ului un border jos, invizibil implicit.
+ * Îl vom folosi mai târziu pentru ca o bară mov să apară în focus.
+ * Border-ul este invizibil implicit astfel că numai culoarea trebuie schimbată,
+ * și astfel interfața nu sare ca și când am da focus-ului
+ * border-ul.
+ *
+ * 4. Acest set de reguli formatează texte placeholder.
+ *
+ * 5. Putem da lățime și înălțime elementelor textarea. Aici,
+ * le folosim pe primele.
+ *
+ * 6. Acest set de reguli formatează butonul de transmitere adăugând
+ * reguli .button și .button--primary-solid.
+ */
+
+.contact-form {
+  padding:          4.286rem;
+  border-radius:    1.071rem;
+  background-color: #ffffff;
+}
+
+  .contact-form__header { margin-bottom: 1.429rem; }
+
+    .contact-form__title { margin-bottom: .7143rem}
+
+    .contact-form__cta {
+      font-size:   1.429rem;
+      line-height: 30px;
+    }
+
+  .contact-form__input-field {
+    display:          block; /* [1] */
+    width:            100%;
+    padding:          1.1428rem 0 .9286rem 1.7143rem;
+    border:           0; /* [2] */
+    border-bottom:    3px solid; /* [3] */
+    border-color:     transparent; /* [3] */
+    margin-bottom:    1.071rem;
+    background-color: #f4f3f5;
+    outline:          none;
+  }
+
+    .contact-form__input-field:focus { border-bottom-color: #6200ea; }
+
+    .contact-form__input-field::placeholder { /* [4] */
+      font-weight: bold;
+      opacity:     .25;
+    }
+
+  .contact-form__input-field--textarea {
+    height:        150px; /* [5] */
+    margin-bottom: 1.4286rem;
+  }
+
+  .contact-form__submit { /* [6] */
+    width:          100%;
+    padding:        1.286rem 0;
+    margin-bottom:  0;
+    font-size:      .857rem;
+    font-weight:    bold;
+    text-transform: uppercase;
+    letter-spacing: .171rem;
+  }
+
+
+
+
+
+/*------------------------------------*\
+  #FOOTER
+\*------------------------------------*/
+
+.footer {
+  height:           7.143rem;
+  padding:          3.071rem 0 3rem 0;
+  background-color: #211138;
+  text-align:       center;
+}
+
+  .footer__copyright {
+    color:          #b2acba;
+    font-size:      .857rem;
+    font-weight:    bold;
+    text-transform: uppercase;
+    letter-spacing: .171rem;
+  }
+
+  .footer__brand-name,
+  .footer__student-name {
+    color: #6200ea;
+  }
