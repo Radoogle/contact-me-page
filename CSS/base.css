@@ -57,15 +57,21 @@
 
 :root {
   
-  /* --bg-primary:           #F4F3F5;
-  --bg-secondary:         #FFFFFF;
-  --bg-header:            #6200EA;
-  --bg-footer:            #211138;
-  --primary-font-color:   #211138;
-  --secondary-font-color: #6200EA;
-  --thirdly-font-color:   #ffffff;
-  --small-font-color:     #B2ACBA;
-  --btn-main-color:       #6200EA; */
+  --bg-primary:                  #F4F3F5;
+  --bg-secondary:                #FFFFFF;
+  --bg-thirdly:                  #F4F3F5;
+
+  --bg-header:                   #6200EA;
+  --bg-footer:                   #211138;
+
+  --primary-font-color:          #211138;
+  --secondary-font-color:        #6200EA;
+  --thirdly-font-color:          #FFFFFF;
+
+  --header-font-color:           #F4F3F5;
+  
+  --footer-primary-font-color:   #B2ACBA;
+  --footer-secondary-font-color: #6200EA;
 }
 
 
@@ -86,10 +92,7 @@
   #BASE FONT SIZE
 \*------------------------------------*/
 
-html { 
-  font-size: 10px;
-  background-color: #F4F3F5;
-} 
+html { font-size: 10px; } 
 /* [2] */
 
 
@@ -135,11 +138,11 @@ small {
   #BASE STYLES
 \*------------------------------------*/
 
-/* body {
-  font-family:      'Montserrat', sans-serif;
+body {
+  font-family:      "Montserrat", sans-serif;
   color:            var(--primary-font-color);
   background-color: var(--bg-primary);
-} */
+}
 
 
 
@@ -160,7 +163,7 @@ a {
   letter-spacing: .12rem;
 } */
 
-
+a { text-decoration: none; }
 
 
 

@@ -59,10 +59,32 @@
 
  .header {
   background-color: #6200EA;
+  height: 80px;
 }
 
+.nav__link {
+  color:          var(--header-font-color);
+  opacity:        65%;
+  text-transform: uppercase;
+  font-size:      1.2rem;
+  line-height:    1.5rem;
+  font-weight:    bold;
+  initial-letter: .24rem;
+  display: inline-block;
+}
 
+.nav__link:hover {
+  color:    var(--header-font-color);
+  opacity:  100%;
+}
 
+.nav__link:hover::after {
+  content: "";
+  height: 4px;
+  color: white;
+  display: block;
+  width: 100%;
+}
 
 
 
@@ -98,14 +120,9 @@
 .contact-info,
 .contact-form {
   background-color: #fff;
-  border: 1px solid black;
-  border-radius: 5px;
-  overflow: auto;
-}
-
-.contact-form__header,
-.contact-form__input-fields {
-  flex: 1;
+  border: 0px solid black;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
 
