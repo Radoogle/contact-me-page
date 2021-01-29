@@ -73,6 +73,7 @@
   display:        inline-block;
   border-bottom:  4px solid transparent;
   padding-top:    3.05rem;
+  transition:     all .3s ease-in-out;
 }
 
 .nav__link:hover {
