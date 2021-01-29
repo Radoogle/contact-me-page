@@ -30,8 +30,8 @@
 
 .layout__item--full-width { width: 100%; }
 
-.layout__item--70-percent {
-  width: 70%;
+.layout__item--70-percent-centered { 
+  width: 70%; 
   margin: 0 auto;
 }
 
@@ -43,7 +43,10 @@
 
 .flex-dir-column  { flex-direction: column; }
 
-.main             { justify-content: space-between; }
+.main { 
+  margin: 4rem auto;
+  justify-content: space-between; 
+}
 
 .header__content { 
   justify-content:  space-between;

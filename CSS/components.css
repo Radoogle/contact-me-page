@@ -117,14 +117,48 @@
 .contact-info,
 .contact-form {
   background-color: #fff;
-  border: 0px solid black;
-  border-radius: 15px;
-  overflow: hidden;
+  border-radius:    1.5rem;
+  overflow:         hidden;
+  padding:          6rem;
 }
 
+.contact-info__map {
+  border-radius:  1.5rem;
+  height:         280px;
+}
 
+.contact-info__heading { color: var(--secondary-font-color); }
 
+.contact-form__text {
+  font-size:    2rem;
+  line-height:  3rem;
+}
 
+.contact-form__title::first-letter { text-transform: capitalize; }
+
+.contact-info__link {
+  display:        block;
+  font-size:      1.2rem;
+  font-weight:    bold;
+  line-height:    1.5rem;
+  letter-spacing: .24rem;
+  text-transform: uppercase;
+  margin:         0 0 1rem 0;
+  color:          var(--secondary-font-color);
+}
+
+.contact-info__social-media-link {
+  font-size: 2rem;
+  display: inline-block;
+  color: var(--thirdly-font-color);
+  background-color: var(--secondary-font-color);
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  line-height: 4rem;
+  text-align: center;
+  margin-right: 1rem;
+}
 
 /*------------------------------------*\
   #FOOTER
