@@ -70,21 +70,17 @@
   line-height:    1.5rem;
   font-weight:    bold;
   initial-letter: .24rem;
-  display: inline-block;
+  display:        inline-block;
+  border-bottom:  4px solid transparent;
+  padding-top:    3.05rem;
 }
 
 .nav__link:hover {
-  color:    var(--header-font-color);
-  opacity:  100%;
+  color:                var(--header-font-color);
+  opacity:              100%;
+  border-bottom-color:  var(--header-font-color);
 }
 
-.nav__link:hover::after {
-  content: "";
-  height: 4px;
-  color: white;
-  display: block;
-  width: 100%;
-}
 
 
 
