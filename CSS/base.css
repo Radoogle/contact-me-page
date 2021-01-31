@@ -134,9 +134,13 @@ p {
   margin: 0 0 2rem 0;
 }
 
-.contact-info__map {
+.contact-info__map,
+.contact-info__address,
+.contact-info__phone-email {
   margin-bottom: 3rem;
 }
+
+
 
 /* [3] */
 
