@@ -16,14 +16,13 @@
  * SETTINGS
  * Variables............Globally-available variables.
  * Box-sizing...........Better default `box-sizing`.
- * Base font size.......Setting the base font size.
+ * Base font sizes......Setting the base font size.
  * Margins..............Top and bottom margins global values.
  * Anchors..............Implicit link settings.
  *
  * BASE STYLES
- * Headings.............H1, H2, H3 styles.
- * Links, buttons.......Base styles.
- * Images...............dimensions, radius and object-fit.
+ * Headings.............H2, H6 styles.
+ * Paragraphs...........Base styles.
  */
 
 
@@ -34,17 +33,16 @@
 \*------------------------------------*/
 
 /**
- * 1. Un model mai rezonabil de box-sizing
+ * 1. Variables for the colors used
+ 
+ * 2. A more rezonable model for box-sizing
  *
- * 2. Această regulă modifică valoarea base font-size,
- * cu care sunt comparate toate unitățile rem units.
+ * 3. This rule will modify the base font-size,
+ * with whom are compared all rem units.
  *
- * 3. Normalize.css setează o margine top și bottom pentru aceste elemente.
- * Asta ar interfera cu layout-ul nostru, deci, cu această regulă o suprascriem.
+ * 4. Normalize.css sets a margin top and bottom for these elements.
+ * In order not to interfere with our layout, this rule will overwrite the margins.
  *
- * 4. Dăm un bottom-margin general principalelor noastre elemente tipografice
- * care ne va asigura că toate marginile orizontale vor fi la fel
- * în mod implicit, pe tot site-ul. Apoi, în unele cazuri, putem să suprascriem.
  */
 
 
@@ -56,8 +54,7 @@
 \*------------------------------------*/
 
 :root {
-  
-  --bg-primary:                  #F4F3F5;
+  --bg-primary:                  #F4F3F5; /* [1] */
   --bg-secondary:                #FFFFFF;
   --bg-thirdly:                  #F4F3F5;
 
@@ -82,39 +79,23 @@
   #BOX-SIZING
 \*------------------------------------*/
 
-* { box-sizing: border-box;} /* [1] */
+* { box-sizing: border-box; } /* [2] */
 
 
 
 
 
 /*------------------------------------*\
-  #FONT SIZE
+  #FONT SIZES
 \*------------------------------------*/
 
-html { font-size: 10px; } 
-/* [2] */
+html { font-size: 10px; } /* [3] */
 
-h2 {
-  font-size: 4rem;
-  font-weight: bold;
-  line-height: 5rem;
-  letter-spacing: 0;
-}
+h2 { font-size: 4rem; }
 
-h6 {
-  font-size: 1.2rem;
-  font-weight: bold;
-  letter-spacing: .24rem;
-  text-transform: uppercase;
-}
+h6 { font-size: 1.2rem; }
 
-p {
-  font-size: 1.4rem;
-  line-height: 2rem;
-  letter-spacing: 0;
-}
-
+p  { font-size: 1.4rem; }
 
 
 
@@ -124,50 +105,29 @@ p {
   #MARGINS
 \*------------------------------------*/
 
-
 h2, 
-h6 {
-  margin: 0 0 1rem 0;
-}
+h6                          { margin: 0 0 1rem 0; } /* [4] */
 
-p {
-  margin: 0 0 2rem 0;
-}
+p                           { margin: 0 0 2rem 0; }
 
 .contact-info__map,
 .contact-info__address,
-.contact-info__phone-email {
-  margin-bottom: 3rem;
-}
+.contact-info__phone-email  { margin-bottom: 3rem; }
 
-p.footer__copyright {
-  margin: 0;
-}
+p.footer__copyright         { margin: 0; }
 
-/* [3] */
 
-/* h1,
-h2,
-h3,
-p,
-ul {
-  margin: 0; 
-} */
 
-/* [4] */
 
-/* h1,
-h2,
-h3,
-p,
-small {
-  margin-bottom: .75rem; 
-} */
 
-/* a {
-  text-decoration: none;
+/*------------------------------------*\
+  #ANCHORS
+\*------------------------------------*/
+
+a { 
+  text-decoration: none; /* [5] */
   cursor:          pointer;
-} */
+ }
 
 
 
@@ -183,45 +143,19 @@ body {
   background-color: var(--bg-primary);
 }
 
+h2 {
+  font-weight:      bold;
+  line-height:      5rem;
+  letter-spacing:   0;
+}
 
+h6 {
+  font-weight:      bold;
+  letter-spacing:   .24rem;
+  text-transform:   uppercase;
+}
 
-
-
-/*------------------------------------*\
-  #HEADINGS AND LINKS/BUTTONS
-\*------------------------------------*/
-
-/* h1 { font-size: 2rem; }
-
-h2,
-h3,
-a { 
-  font-size:      .6rem; 
-  font-weight:    bold;
-  text-transform: uppercase;
-  letter-spacing: .12rem;
-} */
-
-a { text-decoration: none; }
-
-
-
-/*------------------------------------*\
-  #IMAGES
-\*------------------------------------*/
-
-/**
- * 1. Avem nevoie de această declarație display: block; pentru că altfel,
- * va exista un spațiu gol de câțiva pixeli între imagine
- * și restul conținutului. Asta din cauză că img tag este
- * un inline element special implicit, afectat de proprietatea linie-înălțime.
- * Pentru a evita asta, mai bine setezi ca imaginea să fie un element  block.
- */
-
-/* img {
-  width:         6rem;
-  height:        6rem;
-  border-radius: .5rem;
-  object-fit:    cover;
-  display:       block; 
-} */
+p {
+  line-height:      2rem;
+  letter-spacing:   0;
+}
