@@ -140,7 +140,9 @@ p {
   margin-bottom: 3rem;
 }
 
-
+p.footer__copyright {
+  margin: 0;
+}
 
 /* [3] */
 

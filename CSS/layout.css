@@ -44,8 +44,9 @@
 .flex-dir-column  { flex-direction: column; }
 
 .main { 
-  margin: 4rem auto;
-  justify-content: space-between; 
+  margin:           4rem auto;
+  justify-content:  space-between; 
+  min-height:       calc(100vh - 8rem);
 }
 
 .header__content { 
@@ -59,9 +60,13 @@
 .nav__link-container {
   justify-content:  space-between;
   flex-wrap:        wrap;
-  width:            30vw;
+  width:            25vw;
 }
 
+/* .footer {
+  position: absolute;
+  bottom: 0;
+} */
 
 
 /*------------------------------------*\
