@@ -1,23 +1,16 @@
 /**
- * PREZENTARE GENERALĂ
+ * OVERVIEW
  *
- * Acest fișier gestionează schema (layout) website-ului. În loc să seteze
- * schemele componentelor pe rând, creem un sistem separat
- * care are un singur obiectiv—de a spune fiecărui element
- * ce dimensiune trebuie să aibă și unde trebuie să apară.
+ * This file sets the layout of the page.
  */ 
  
- 
- 
+  
  /**
  * CONTENTS
  *
  * LAYOUT
- * Elements.............Rules for the container and items
- * Images...............Floating just the thumbnail images and clearing the float after.
+ * Elements.............Rules for the container and items.
  *
- * GRID GAPS
- * Grid gaps............Whitespaces between columns in grids.
  */
 
 
@@ -28,26 +21,20 @@
   #ELEMENTS
 \*------------------------------------*/
 
-.layout__item--full-width { width: 100%; }
+.layout__item--full-width           { width: 100%; }
+
+.layout__item--50-percent-w-gutter  { width: calc(50% - 1.5rem); }
 
 .layout__item--70-percent-centered { 
   width: 70%; 
   margin: 0 auto;
 }
 
-.layout__item--50-percent-w-gutter { width: calc(50% - 1.5rem); }
-
 .flex-container   { display: flex; }
 
 .flex-dir-row     { flex-direction: row; }
 
 .flex-dir-column  { flex-direction: column; }
-
-.main { 
-  margin:           4rem auto;
-  justify-content:  space-between; 
-  min-height:       calc(100vh - 8rem);
-}
 
 .header__content { 
   justify-content:  space-between;
@@ -56,28 +43,13 @@
 
 .logo { align-self: center; }
 
-
 .nav__link-container {
   justify-content:  space-between;
   flex-wrap:        wrap;
   width:            25vw;
 }
-
-
-
-/*------------------------------------*\
-  #IMAGES
-\*------------------------------------*/
-
-
-
-
-
-
-
-/*------------------------------------*\
-  #GRID GAPS
-\*------------------------------------*/
-
-
-
+.main { 
+  margin:           4rem auto;
+  justify-content:  space-between; 
+  min-height:       calc(100vh - 8rem);
+}
