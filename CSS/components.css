@@ -1,27 +1,22 @@
 /**
- * PREZENTARE GENERALĂ
+ * OVERVIEW
  *
- * Acest fișier descrie componentele care alcătuiesc site-ul.
- * De la layout-ul interior la culoarea fontului etc.
+ * This file contains the components that make up the page.
+ * From the internal layout to font color etc.
  *
- * Incercand sa respecte regula BEM (Block–Element–Modifier) din
- * CSS guidelines: https://cssguidelin.es/#bem-like-naming a lui Harry Roberts
+ * Respecting the BEM (Block–Element–Modifier) rule of Harry Roberts 
+ * from CSS guidelines: https://cssguidelin.es/#bem-like-naming
  */
 
 
 /**
  * CONTENTS
  *
- *
- * BUTTONS
- *
  * HEADER
  *
  * NAVIGATION
  *
  * MAIN CONTENT
- *
- * SIDEBAR
  *
  * FOOTER
  */
@@ -31,35 +26,12 @@
 
 
 /*------------------------------------*\
-  #BUTTONS
-\*------------------------------------*/
-
-
-/*
- * we make the line-height the same as height in order to have the text vertically aligned
-*/
-
-
-
-
-
-
-
-/*------------------------------------*\
   #HEADER
 \*------------------------------------*/
 
-/**
- *
- * 1. Folosim acest padding left pentru ca logo-ul să apară în același loc
- * la fel ca în prototipul de design.
- * to keep it in the middle: (100%  - self-width) / 2
- *
- */
-
  .header {
   background-color: #6200EA;
-  height: 80px;
+  height:           8rem;
 }
 
 
@@ -69,11 +41,6 @@
 /*------------------------------------*\
   #NAVIGATION
 \*------------------------------------*/
-
-/**
- * 1. Acest padding este necesar pentru a putea afișa
- * bara mov a efectului hover în locul adecvat.
- */
 
  .nav__link {
   color:          var(--header-font-color);
@@ -103,14 +70,7 @@
   #MAIN CONTENT
 \*------------------------------------*/
 
-/** 
- * 1. fallback background color in case the img can't be loaded.
- * 2. for the last post in list we eliminate the bottom margin.
- */
-
-.main {
-  background-color: #F4F3F5;
-}
+.main { background-color: #F4F3F5; }
 
 .contact-info,
 .contact-form {
@@ -123,7 +83,7 @@
   .contact-info__map {
     border-radius:  1.5rem;
     width:          100%;
-    height:         280px;
+    height:         28rem;
   }
 
   .contact-info__heading { color: var(--secondary-font-color); }
